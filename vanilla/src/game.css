@@ -1,0 +1,22 @@
+@property --color {
+    syntax: "<color>";
+}
+
+.game-table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.game-table td {
+    width: 1em;
+    height: 1em;
+    min-width: 1em;
+    min-height: 1em;
+    max-width: 1em;
+    max-height: 1em;
+}
+
+.game-table td.is-on {
+    background-color: var(--color);
+    border: 1px solid black;
+}

@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "vanilla/src/server/index.mts", "vanilla/src/client/index.mts", "vanilla/src/client/minos.mts"],
+  "exclude": ["node_modules", "vanilla"]
 }

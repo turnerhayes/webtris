@@ -1,0 +1,26 @@
+.root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boardTable {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.boardBlock {
+    width: 1em;
+    max-width: 1em;
+    min-width: 1em;
+    height: 1em;
+    min-height: 1em;
+    max-height: 1em;
+}
+
+.isFilled {
+    border: 1px solid black;
+    background-color: var(--color);
+}

@@ -1,0 +1,14 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noEmit": false,
+        "target": "ES2022",
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.mts"
+    ],
+    "exclude": ["node_modules"],
+}

@@ -1,0 +1,22 @@
+{
+  "name": "webtris",
+  "version": "0.1.0",
+  "description": "Webtris",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack --watch"
+  },
+  "author": "Turner Hayes<dev@turnerhayes.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.controls {
+    flex: 1;
+}
+
+.game-container {
+    flex: 2;
+    display: flex;
+}

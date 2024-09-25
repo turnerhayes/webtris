@@ -1,14 +1,21 @@
 {
-    "extends": "../tsconfig.json",
     "compilerOptions": {
-        "outDir": "./dist",
-        "sourceMap": true,
-        "noEmit": false,
-        "target": "ES2022",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "outDir": "./dist",
+      "sourceMap": true,
+      "noEmit": false,
+      "target": "ES2022",
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
     },
     "include": [
-        "src/**/*.ts",
-        "src/**/*.mts"
+      "src/**/*.ts",
     ],
     "exclude": ["node_modules"],
 }

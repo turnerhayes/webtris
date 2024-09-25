@@ -4,6 +4,7 @@
   "description": "Webtris",
   "main": "index.js",
   "scripts": {
+    "serve": "webpack serve",
     "build": "webpack",
     "build:watch": "webpack --watch"
   },
@@ -17,6 +18,7 @@
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }

@@ -1,26 +1,14 @@
 {
-  "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noEmit": false,
+        "target": "ES2022",
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.mts"
     ],
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "vanilla/src/server/index.mts", "vanilla/src/client/index.mts", "vanilla/src/client/minos.mts"],
-  "exclude": ["node_modules", "vanilla"]
+    "exclude": ["node_modules"],
 }

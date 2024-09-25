@@ -1,34 +1,22 @@
 {
   "name": "webtris",
   "version": "0.1.0",
-  "private": true,
+  "description": "Webtris",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev --experimental-https",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "build": "webpack",
+    "build:watch": "webpack --watch"
   },
+  "author": "Turner Hayes<dev@turnerhayes.com>",
+  "license": "MIT",
   "dependencies": {
-    "next": "14.2.9",
-    "react": "^18",
-    "react-dom": "^18",
-    "ts-node": "^10.9.2",
-    "webpack": "^5.94.0"
+    "typescript": "^5.6.2"
   },
   "devDependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/react": "^16.0.1",
-    "@types/jest": "^29.5.13",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.9",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "typescript": "^5"
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "webpack-cli": "^5.1.4"
   }
 }

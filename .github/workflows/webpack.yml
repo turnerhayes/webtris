@@ -32,7 +32,7 @@ jobs:
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v2.0.0
       with:
-        path: .
+        path: dist/
   deploy:
     permissions:
       contents: read

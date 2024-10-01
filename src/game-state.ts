@@ -30,21 +30,53 @@ export const addMinoToBoard = (
 
     const [x, y] = offset;
 
+    if (y < 0) {
+        throw new Error(
+            `y offset must be greater than or equal to 0 (was ${y})`
+        );
+    }
+
+    if (y >= board.length - mino.length) {
+        throw new Error(
+            `y offset must be less than ${
+                board.length - mino.length
+            } (was ${y})`
+        );
+    }
+
+    if (x < 0) {
+        throw new Error(
+            `x offset must be greater than or equal to 0 (was ${x})`
+        );
+    }
+
+    if (x >= board[0].length - mino[0].length) {
+        throw new Error(
+            `x offset must be less than ${
+                board[0].length - mino[0].length
+            } (was ${x})`
+        );
+    }
+
     for (
         let rowInMino = 0;
         rowInMino < mino.length;
         rowInMino++
     ) {
         const rowInBoard = y + rowInMino;
-        if (rowInBoard >= board.length) {
-            throw new Error(`Trying to add a mino to the board at (${
-                x
-            }, ${y}) but it extends past the bottom`);
-        }
         const minoRow = mino[rowInMino];
         newBoard[rowInBoard] = board[rowInBoard].slice(0, x).concat(
             minoRow.map((isOn: boolean, index: number) => {
                 if (isOn) {
+                    if (board[rowInBoard][index + x].isOn) {
+                        throw new Error(
+                            `Cannot place mino over existing filled cell at [${
+                                index + x
+                            }, ${
+                                rowInBoard
+                            }]`
+                        );
+                    }
                     return {
                         isOn: true,
                         color,
@@ -65,7 +97,7 @@ export const clearCompleteLines = (board: GameBoard) => {
     const updatedBoard = [
         ...board,
     ];
-    for (let row = board.length - 1; row >= 0; row--) {
+    for (let row = 0; row < board.length; row++) {
         if (updatedBoard[row].some(({isOn}) => !isOn)) {
             continue;
         }
